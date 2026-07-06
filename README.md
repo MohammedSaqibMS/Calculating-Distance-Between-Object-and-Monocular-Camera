@@ -70,10 +70,9 @@ A single calibration point assumes the depth model behaves linearly across all d
 1. **Calibrate**: Capture an image with the object at a known distance and record the reference depth.
 2. **Update** the reference values (`reference_depth`, `reference_distance_cm`) in the distance calculation step.
 3. **Run** the pipeline on new images or video to get live distance estimates.
-4. **Improve accuracy** (optional) by collecting multiple calibration points and fitting a mapping function instead of a single ratio.
+4. **Improve accuracy** by collecting multiple calibration points and fitting a mapping function instead of a single ratio.
 
 ![Video Output of Camera to Object Distance](assets/output_with_distance--1-.gif)
-*Video demo: the pipeline running on a video stream, annotating each frame with the object's estimated distance in real time.*
 
 ## Notes & Limitations
 
