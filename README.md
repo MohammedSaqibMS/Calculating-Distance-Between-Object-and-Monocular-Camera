@@ -18,7 +18,7 @@ Measuring distance with a single camera is inherently ambiguous — unlike stere
 This pipeline was implemented and run **locally**, after two earlier approaches were explored:
 
 - **MGNet** (monocular panoptic segmentation + self-supervised depth) — a strong academic multi-task framework, but oriented toward research benchmarks (Cityscapes/KITTI) rather than plug-and-play deployment.
-<-- - **YOLO11-based detection pipeline** — an earlier attempt paired object detection with a depth model that ultimately proved unreliable for real-world distance calibration. --/>
+<-- - **YOLO11-based detection pipeline** — an earlier attempt paired object detection with a depth model that ultimately proved unreliable for real-world distance calibration. --!>
 
 Because of that, only the **object detection and distance-display logic** (bounding boxes, center-point marking, and drawing the distance label on the frame) was carried over from that earlier approach. The actual **depth estimation and distance calculation** are done differently — using **Depth Anything V2** together with the reference-calibration technique described below, which proved reliable when run locally.
 
