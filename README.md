@@ -2,7 +2,7 @@
 
 Estimating the real-world distance of an object from a single (monocular) RGB camera, using object detection combined with monocular depth estimation and a reference-based calibration technique.
 
-![Depth Anything V2 for Metric Depth Estimation](assets/Depth Anything V2 for Metric Depth Estimation.png)
+![Depth Anything V2 for Metric Depth Estimation](assets/depth_anything_v2_metric_depth_estimation.png)
 *Depth Anything V2 used for metric depth estimation, the core depth model powering this pipeline.*
 
 ## Overview
