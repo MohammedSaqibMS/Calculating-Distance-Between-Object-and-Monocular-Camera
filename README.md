@@ -2,7 +2,7 @@
 
 Estimating the real-world distance of an object from a single (monocular) RGB camera, using object detection combined with monocular depth estimation and a reference-based calibration technique.
 
-![Depth Anything V2 for Metric Depth Estimation](assets/depth_anything_v2_metric.png)
+![Depth Anything V2 for Metric Depth Estimation](assets/Depth Anything V2 for Metric Depth Estimation.png)
 *Depth Anything V2 used for metric depth estimation, the core depth model powering this pipeline.*
 
 ## Overview
@@ -31,10 +31,10 @@ Before estimating unknown distances, the system needs a baseline:
 - Run the depth model on the same image and read the depth value at that center pixel.
 - Store this as the **reference depth**, paired with the known **reference distance**.
 
-![Reference Depth calibration workflow](assets/reference_depth_calibration_workflow.png)
+![Reference Depth calibration workflow](assets/example_2_ref_depth.png)
 *The calibration workflow: object detection + depth estimation combined to compute a reference depth at a known distance.*
 
-![Output showing reference depth](assets/output_reference_depth.png)
+![Output showing reference depth](assets/output_distance.png)
 *Example output of the calibration step, showing the detected object and its resulting reference depth value.*
 
 ### 2. Distance Estimation
@@ -47,10 +47,10 @@ For any new frame:
 estimated_distance_cm = (reference_depth / object_depth) * reference_distance_cm
 ```
 
-![Camera to Object Distance](assets/camera_to_object_distance_workflow.png)
+![Camera to Object Distance](assets/cam_to_obj_distance.png)
 *The full "Camera to Object Distance" workflow: detection, depth lookup, and conversion to real-world distance.*
 
-![Output of Camera to Object Distance](assets/output_camera_to_object_distance.png)
+![Output of Camera to Object Distance](assets/output_distance.png)
 *Example output: detected object with its estimated distance from the camera annotated on the image.*
 
 ### 3. (Optional) Multi-Point Calibration for Better Accuracy
@@ -77,7 +77,7 @@ A single calibration point assumes the depth model behaves linearly across all d
 3. **Run** the pipeline on new images or video to get live distance estimates.
 4. **Improve accuracy** (optional) by collecting multiple calibration points and fitting a mapping function instead of a single ratio.
 
-![Video Output of Camera to Object Distance](assets/video_output_camera_to_object_distance.gif)
+![Video Output of Camera to Object Distance](assets/output_with_distance--1-.gif)
 *Video demo: the pipeline running on a video stream, annotating each frame with the object's estimated distance in real time.*
 
 ## Notes & Limitations
