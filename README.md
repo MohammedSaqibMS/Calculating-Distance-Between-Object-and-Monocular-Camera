@@ -45,12 +45,10 @@ estimated_distance_cm = (reference_depth / object_depth) * reference_distance_cm
 ```
 
 ![Camera to Object Distance](assets/cam_to_obj_distance.png)
-*The full "Camera to Object Distance" workflow: detection, depth lookup, and conversion to real-world distance.*
 
 ![Output of Camera to Object Distance](assets/output_distance.png)
-*Example output: detected object with its estimated distance from the camera annotated on the image.*
 
-### 3. (Optional) Multi-Point Calibration for Better Accuracy
+### 3. Multi-Point Calibration for Better Accuracy
 A single calibration point assumes the depth model behaves linearly across all distances, which isn't always true. Accuracy can be improved by:
 - Capturing depth values at several known distances (e.g., 30 cm, 60 cm, 100 cm, 150 cm).
 - Fitting a mapping function (linear, polynomial, or exponential) between depth values and real-world distance.
