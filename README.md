@@ -31,10 +31,8 @@ Before estimating unknown distances, the system needs a baseline:
 - Store this as the **reference depth**, paired with the known **reference distance**.
 
 ![Reference Depth calibration workflow](assets/example_2_ref_depth.png)
-*The calibration workflow: object detection + depth estimation combined to compute a reference depth at a known distance.*
 
 ![Output showing reference depth](assets/output_distance.png)
-*Example output of the calibration step, showing the detected object and its resulting reference depth value.*
 
 ### 2. Distance Estimation
 For any new frame:
